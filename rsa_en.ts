@@ -68,7 +68,7 @@ function modular_power(base: number, exponent: number, modulus: number): number 
 }
 
 
-class RSAKey {
+export class RSAKey {
 
 	private exponent: number
 	public mod: number
@@ -79,7 +79,7 @@ class RSAKey {
 		this.mod = mod
 	}
 
-	šifrovat(message: number): number {
+	cipher(message: number): number {
 
 		return modular_power(message, this.exponent, this.mod)
 	}
@@ -87,7 +87,7 @@ class RSAKey {
 }
 
 
-class RSAKeyPair {
+export class RSAKeyPair {
 
 	public publicKey: RSAKey
 	public privateKey: RSAKey
@@ -112,4 +112,3 @@ class RSAKeyPair {
 	}
 
 }
-

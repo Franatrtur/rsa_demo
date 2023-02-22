@@ -36,21 +36,21 @@ function modular_power(base, exponent, modulus) {
     while (exponent) {
         if ((exponent & 1) == 1)
             result = (result * base) % modulus;
-        exponent >>= 1;
+        exponent >>= 1; //next bit
         base = (Math.pow(base, 2)) % modulus;
     }
     return result;
 }
-class RSAKey {
+export class RSAKey {
     constructor(exponent, mod) {
         this.exponent = exponent;
         this.mod = mod;
     }
-    šifrovat(message) {
+    cipher(message) {
         return modular_power(message, this.exponent, this.mod);
     }
 }
-class RSAKeyPair {
+export class RSAKeyPair {
     constructor(publicKey, privateKey) {
         this.publicKey = publicKey;
         this.privateKey = privateKey;
