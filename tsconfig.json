@@ -1,0 +1,17 @@
+{
+
+	"compilerOptions" : {
+
+		"target": "ES6",
+
+		"lib": ["ES6", "DOM", "ESNext"],
+
+		"sourceMap": false,
+
+		"removeComments": false,
+
+		"watch": false
+
+	}
+
+}

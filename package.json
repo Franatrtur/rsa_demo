@@ -1,0 +1,16 @@
+{
+  "name": "rsa_demonstration",
+  "version": "1.0.0",
+  "description": "This package contains a demonstrative implementation of the RSA cipher for a class paper",
+  "main": "rsa.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "rsa",
+    "toy",
+    "cipher"
+  ],
+  "author": "František Čech",
+  "license": "ISC"
+}
