@@ -1,11 +1,12 @@
 {
   "name": "@franatrtur/rsa_demo",
-  "version": "1.4.0",
+  "version": "1.5.0",
   "type": "module",
   "description": "This package contains a demonstrative implementation of the RSA cipher for a class paper",
   "main": "rsa_en.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "node test.js",
+    "prepare": "tsc"
   },
   "files": [
     "rsa_en.js",

@@ -11,6 +11,8 @@ outer: for(let n = 3; n < 256; n += 2){
 	PRIMES.push(n)
 }
 
+export const Primes = PRIMES.slice()
+
 function random_prime(): number{
 
 	// only select from the bigger half of primes
@@ -18,7 +20,7 @@ function random_prime(): number{
 }
 
 //code design from: https://www.geeksforgeeks.org/multiplicative-inverse-under-modulo-m/#tablist3-tab7
-function modular_inversion(num: number, modulus: number): number{ //int != 1
+function modular_inversion(num: number, modulus: number): number{ //num != 1
 
 	let mod0 = modulus
 	let y = 0, x = 1
@@ -85,11 +87,23 @@ export class RSAKeyPair {
 	public publicKey: RSAKey
 	public privateKey: RSAKey
 
-	static generate(){
+	static generate(prime1: number = 0, prime2: number = 0, exponent: number = 7){
 
-		let e = 65
+		let e = exponent
 
-		let p = random_prime(), q = random_prime()
+		if(prime1 % e == 1 || prime2 % e == 1) //assert modular invertibility under phi(n)
+			throw new Error("Exponent must be coprime with totient of n")
+
+		do
+			prime1 = random_prime()
+		while(prime1 % e == 1)
+
+		do
+			prime2 = random_prime()
+		while(prime2 % e == 1 || prime2 == prime1) // prevent factorization to n = p*p
+
+		let p = prime1,
+			q = prime2
 
 		let n = p * q
 		let totient = (p - 1) * (q - 1)
