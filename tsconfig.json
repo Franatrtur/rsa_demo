@@ -6,7 +6,7 @@
 
 		"lib": ["ES6", "DOM", "ESNext"],
 
-		"sourceMap": false,
+		"declaration": true,
 
 		"removeComments": false,
 
