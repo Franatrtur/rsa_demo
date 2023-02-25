@@ -1,16 +1,8 @@
 
-/*
- * Tento soubor obsahuje demonstrativní implementaci šifry RSA v programovacím jazyce javascript
- * pro ročníkovou práci "Asymetrická kryptografie a šifrovací systém RSA"
- * (Gymnázium Slovanské náměstí, Brno, 2023). Autor Franišek Čech, V.A
- */
-
-
-
-let PRIMES: Array<number> = [2] //small PRIMES (less than 2^10) - constant
+let PRIMES: Array<number> = [2] //small PRIMES (less than 2^8) - constant
 
 //array initialization
-outer: for(let n = 3; n < 1024; n += 2){
+outer: for(let n = 3; n < 256; n += 2){
 
 	for(let factor = 1; factor < PRIMES.length; factor++)
 		if(n % PRIMES[factor] === 0)
@@ -21,8 +13,8 @@ outer: for(let n = 3; n < 1024; n += 2){
 
 function random_prime(): number{
 
-	// only select from the bigger 3/4 of primes
-	return PRIMES[PRIMES.length / 4 + Math.floor(Math.random() * (PRIMES.length * 3/4))]
+	// only select from the bigger half of primes
+	return PRIMES[PRIMES.length / 2 + Math.floor(Math.random() * (PRIMES.length / 2))]
 }
 
 //code design from: https://www.geeksforgeeks.org/multiplicative-inverse-under-modulo-m/#tablist3-tab7
@@ -80,7 +72,7 @@ export class RSAKey {
 		this.mod = mod
 	}
 
-	cipher(message: number): number {
+	process(message: number): number {
 
 		return modular_power(message, this.exponent, this.mod)
 	}
