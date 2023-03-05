@@ -38,7 +38,6 @@ function modular_inversion(num: number, modulus: number): number{ //num != 1
 
 		y = x - quot * y
 		x = temp
-
 	}
 	
 	return x < 0 ? x + mod0 : x
@@ -56,7 +55,6 @@ function modular_power(base: number, exponent: number, modulus: number): number 
 
 		exponent >>= 1 //next bit
 		base = (base ** 2) % modulus
-
 	}
 
 	return result
@@ -74,7 +72,7 @@ export class RSAKey {
 		this.mod = mod
 	}
 
-	process(message: number): number {
+	process(message: number): number { //encrypt = decrypt
 
 		return modular_power(message, this.exponent, this.mod)
 	}
