@@ -14,4 +14,4 @@ import { RSAKey, RSAKeyPair } from "@franatrtur/rsa_demo"
 ```
 Šifrování a dešifrování správ (čísla 1-1000) lze provádět pomocí funkce `(object RSAKey).process(message: number): number`.  
 Vytvoření klíčového páru pze provést pomocí funkce `(class RSAKeyPair).generate()`.  
-Funkce vybere exponent a náhodná prvočísla z intervalu 2 do 256, ale je možné jí podat p, q, e jako parametry.
+Funkce vybere exponent 7 a náhodná prvočísla z intervalu 2 do 256, ale je možné jí podat p, q, e jako parametry.
