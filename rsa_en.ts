@@ -92,13 +92,11 @@ export class RSAKeyPair {
 		if(prime1 % e == 1 || prime2 % e == 1) //assert modular invertibility under phi(n)
 			throw new Error("Exponent must be coprime with totient of n")
 
-		do
+		while(!prime1 || prime1 % e == 1)
 			prime1 = random_prime()
-		while(prime1 % e == 1)
 
-		do
+		while(!prime2 || prime2 % e == 1 || prime2 == prime1) // prevent factorization to n = p*p
 			prime2 = random_prime()
-		while(prime2 % e == 1 || prime2 == prime1) // prevent factorization to n = p*p
 
 		let p = prime1,
 			q = prime2

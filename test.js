@@ -18,3 +18,5 @@ for(let msg = 1; msg < 100; msg++){
 }
 
 console.log("All tests passed")
+
+console.log(RSAKeyPair.generate(257, 89, 7))

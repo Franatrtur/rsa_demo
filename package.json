@@ -1,7 +1,11 @@
 {
   "name": "@franatrtur/rsa_demo",
-  "version": "1.5.0",
+  "version": "1.5.2",
   "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Franatrtur/rsa_demo"
+  },
   "description": "This package contains a demonstrative implementation of the RSA cipher for a class paper",
   "main": "rsa_en.js",
   "scripts": {
