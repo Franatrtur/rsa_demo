@@ -4,7 +4,7 @@ function testRsa(msg, keypair){
 	let encr = keypair.publicKey.process(msg)
 	let decr = keypair.privateKey.process(encr)
 	if(decr != msg)
-		throw {keypair, msg}
+		throw {err: "RSA test failed", keypair, msg}
 }
 
 
@@ -18,5 +18,3 @@ for(let msg = 1; msg < 100; msg++){
 }
 
 console.log("All tests passed")
-
-console.log(RSAKeyPair.generate(257, 89, 7))
