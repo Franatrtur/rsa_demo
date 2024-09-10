@@ -2,7 +2,7 @@ Tento archiv obsahuje demonstrativní implementaci šifry RSA v programovacím j
 pro ročníkovou práci "Asymetrická kryptografie a šifrovací systém RSA"
 (Gymnázium Slovanské náměstí, Brno, 2023). Autor Franišek Čech, V.A
 
-Ukázka procesu RSA: https://franatrtur.github.io/demo/
+Ukázka procesu RSA: https://franatrtur.github.io/rsa_demo/demo
 
 #### Použití:
 Modul exportuje (ES6 modle system) třídu `RSAKey{mod: number, exponent: number}` a 
