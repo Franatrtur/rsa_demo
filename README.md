@@ -1,10 +1,13 @@
+# rsa_demo
+
 Tento archiv obsahuje demonstrativní implementaci šifry RSA v programovacím jazyce javascript
 pro ročníkovou práci "Asymetrická kryptografie a šifrovací systém RSA"
 (Gymnázium Slovanské náměstí, Brno, 2023). Autor Franišek Čech, V.A
 
-Ukázka procesu RSA: https://franatrtur.github.io/rsa_demo/demo
+Ukázka procesu RSA: [https://franatrtur.github.io/rsa_demo/demo]
+Moje práce v PDF: [https://franatrtur.github.io/rsa_demo/demo/thesis.pdf]
 
-#### Použití:
+### Použití:
 Modul exportuje (ES6 modle system) třídu `RSAKey{mod: number, exponent: number}` a 
 `RSAKeyPair{publicKey: RSAKey, privateKey: RSAKey}`.  
 Jak začít modul používat:
