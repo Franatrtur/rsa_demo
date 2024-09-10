@@ -4,7 +4,7 @@ Tento archiv obsahuje demonstrativní implementaci šifry RSA v programovacím j
 pro ročníkovou práci "Asymetrická kryptografie a šifrovací systém RSA"
 (Gymnázium Slovanské náměstí, Brno, 2023). Autor Franišek Čech, V.A
 
-Ukázka procesu RSA: [https://franatrtur.github.io/rsa_demo/demo]
+Ukázka procesu RSA: [https://franatrtur.github.io/rsa_demo/demo]   
 Moje práce v PDF: [https://franatrtur.github.io/rsa_demo/demo/thesis.pdf]
 
 ### Použití:
